@@ -1,0 +1,154 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 6px 32px 0 rgba(44,0,77,0.10), 0 1.5px 6px 0 rgba(44,0,77,0.08);
+  border-radius: 24px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(2px);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px 0 rgba(44,0,77,0.08);
+  margin-bottom: 1.5em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* High contrast mode */
+.high-contrast {
+  background: #2d004d !important;
+  color: #ffe600 !important;
+}
+.high-contrast button {
+  background: #ffe600 !important;
+  color: #2d004d !important;
+  border: 2px solid #ffe600 !important;
+}
+
+/* MemoryMatrix card grid styles */
+.memory-card {
+  width: 70px;
+  height: 100px;
+  font-size: 2.1rem;
+  border: 2px solid #ffe600;
+  border-radius: 18px;
+  margin: 6px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+  background: #6c2eb7;
+  color: #ffe600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Inter', 'Avenir', 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 2px 8px 0 rgba(44,0,77,0.10);
+  user-select: none;
+  cursor: pointer;
+}
+.memory-card.flipped, .memory-card.matched {
+  background: #ffe600;
+  color: #2d004d;
+  border-color: #ffe600;
+  box-shadow: 0 4px 16px 0 rgba(255,230,0,0.13);
+  transform: scale(1.04);
+}
+.memory-card:not(.flipped):not(.matched):hover {
+  background: #7d3eea;
+  color: #ffe600;
+  box-shadow: 0 4px 16px 0 rgba(108,46,183,0.13);
+  transform: scale(1.03);
+}
+.memory-card:not(.flipped):not(.matched) {
+  background: #6c2eb7;
+  color: transparent;
+  border-color: #ffe600;
+}
+.high-contrast .memory-card.flipped, .high-contrast .memory-card.matched {
+  background: #ffe600 !important;
+  color: #2d004d !important;
+  border-color: #ffe600 !important;
+}
+.high-contrast .memory-card:not(.flipped):not(.matched) {
+  background: #2d004d !important;
+  color: transparent !important;
+  border-color: #ffe600 !important;
+}
+
+button {
+  border-radius: 12px;
+  border: 2px solid #ffe600;
+  padding: 0.7em 1.5em;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #ffe600;
+  color: #2d004d;
+  cursor: pointer;
+  transition: background 0.22s, color 0.22s, box-shadow 0.18s, border-color 0.18s, transform 0.12s;
+  box-shadow: 0 2px 8px 0 rgba(44,0,77,0.10);
+}
+button:hover {
+  background-color: #fff700;
+  color: #6c2eb7;
+  border-color: #fff700;
+  box-shadow: 0 4px 16px 0 rgba(255,230,0,0.13);
+  transform: translateY(-2px) scale(1.04);
+}
+button:active {
+  background-color: #ffe600;
+  color: #2d004d;
+  border-color: #ffe600;
+  box-shadow: 0 1px 4px 0 rgba(44,0,77,0.10);
+  transform: scale(0.98);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffe600;
+  font-family: 'Inter', 'Avenir', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.02em;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(44,0,77,0.10);
+  margin-bottom: 0.5em;
+}
